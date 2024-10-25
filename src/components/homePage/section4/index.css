@@ -1,0 +1,26 @@
+.bottomli {
+  position: relative;
+}
+
+.bottomli::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: auto; /* Keep left aligned initially */
+  width: 0;
+  height: 1px;
+  background-color: gray;
+  transition: width 0.3s ease-in-out, left 0.3s ease-in-out; /* Smoothly animate both width and left */
+}
+
+.bottomli:hover::before {
+  width: 100%; /* Expand to full width on hover */
+  left: 0;     /* Ensure it starts from the left on hover */
+}
+
+.bottomli:not(:hover)::before {
+  width: 0;    /* Shrink the underline */
+  left: auto;  /* Make it shrink towards the right */
+  right: 0;    /* Align to the right when shrinking */
+}
