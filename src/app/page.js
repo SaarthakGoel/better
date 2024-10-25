@@ -56,8 +56,6 @@ export default function Home() {
       </div>
       <Section2 />
       <Section3 />
-      <Section4 />
-      <Footer />
     </div>
 
   );

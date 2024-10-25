@@ -16,15 +16,15 @@ export default function Section4() {
 
 
   return (
-    <div className="h-[105vh]">
+    <div className="pt-10 lg:pt-20 bg-[#f0f7f1]">
 
       <hr />
 
-      <div className="px-40 py-20">
+      <div className=" px-10  lg:px-20 xl:px-40 py-20">
         <BetterLogo />
 
-        <div className="flex justify-between pt-4 gap-10">
-          <div className="w-[25vw]">
+        <div className="flex flex-col lg:flex-row justify-between pt-4 gap-10">
+          <div className="w-[80vw] lg:w-[25vw]">
             <span>Better is a family of companies serving all your homeownership needs.</span>
             <div className="mt-6">
               <Image className="cursor-pointer" src="/bottom-links/better-mortgage-logo.svg" width={150} height={50} alt="hello" />
@@ -40,7 +40,7 @@ export default function Section4() {
             </div>
           </div>
 
-          <div className="w-[15vw]">
+          <div className="w-[80vw] lg:w-[15vw]">
             <h3>Resources</h3>
             <ul className="mt-6">
               <li className="text-sm py-3 text-[#004733] bottomli">Home affordability calculator</li>
@@ -57,7 +57,7 @@ export default function Section4() {
             </ul>
           </div>
 
-          <div className="w-[15vw]">
+          <div className="w-[80vw] lg:w-[15vw]">
             <h3>Company</h3>
             <ul className="mt-6">
               <li className="text-sm py-3 text-[#004733] bottomli">About Us</li>
@@ -70,7 +70,7 @@ export default function Section4() {
             </ul>
           </div>
 
-          <div className="w-[15vw]">
+          <div className="w-[80vw] lg:w-[15vw]">
             <h3>Contact Us</h3>
             <ul className="mt-6">
               <li className="text-sm py-3 text-[#004733] bottomli">hello@better.com</li>

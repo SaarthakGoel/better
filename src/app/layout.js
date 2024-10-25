@@ -1,5 +1,7 @@
 import localFont from "next/font/local";
 import "./globals.css";
+import Section4 from "@/components/homePage/section4";
+import Footer from "@/components/homePage/footer";
 
 const poppinsMedium = localFont({
   src: "./fonts/poppins-medium-webfont.woff",  // Path to your local Poppins Medium font
@@ -19,6 +21,8 @@ export default function RootLayout({ children }) {
         className={`${poppinsMedium.variable} font-poppins`}
       >
         {children}
+        <Section4 />
+        <Footer />
       </body>
     </html>
   );
