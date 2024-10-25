@@ -21,8 +21,6 @@ export default function RootLayout({ children }) {
         className={`${poppinsMedium.variable} font-poppins`}
       >
         {children}
-        <Section4 />
-        <Footer />
       </body>
     </html>
   );

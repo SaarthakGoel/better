@@ -1,7 +1,15 @@
+'use client'
 import Link from "next/link";
+import { useState } from "react";
 
 
 export default function Header() {
+
+  const [ham, setHam] = useState(false);
+
+  function handleHam() {
+    setHam(true)
+  }
 
   const Bettersvg = () => {
     return (
@@ -15,94 +23,102 @@ export default function Header() {
     )
   }
 
+  const Hamsvg = () => {
+    return (
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu "><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg>
+    )
+  }
+
   return (
-    <div className="flex justify-between items-center px-24 py-6 fixed top-0 left-0 right-0 z-[1000]">
-      <ul className="flex justify-center items-center font-thin">
-        <li><Link href='/'><Bettersvg /></Link></li>
-        <li className="relative group py-2 px-4 mx-5 font-extralight rounded-full hover:bg-white hover:text-[#004733]"><Link href='/'>Buy</Link>
-          <ul className="absolute hidden left-0 bg-white top-full rounded-lg shadow-md p-4 group-hover:flex group-hover:flex-col ">
-            {
-              ["Apply now",
-                "Purchase rates",
-                "Affordability calculator",
-                "Mortgage calculator",
-                "Rent vs buy calculator",
-                "Find an agent",
-                "VA loans",
-                "Learning center"].map((item) => {
-                  return (
-                    <li className="text-nowrap py-3 px-2 rounded-md flex gap-8 justify-between hover:bg-[#f6f6f3] group"><span>{item}</span><span><Arrowsvg /></span></li>
-                  )
-                })
-            }
-          </ul>
-        </li>
-        <li className="relative group py-2 px-4 mx-5 font-extralight rounded-full hover:bg-white hover:text-[#004733]"><Link href='/'>Refinance</Link>
-          <ul className="absolute hidden left-0 bg-white top-full rounded-lg shadow-md p-4 group-hover:flex group-hover:flex-col ">
-            {
-              ["Apply Now",
-                "Refinance rates",
-                "Cash-out refinance calculator",
-                "Learning Center"].map((item) => {
-                  return (
-                    <li className="text-nowrap py-3 px-2 rounded-md flex gap-8 justify-between hover:bg-[#f6f6f3] group"><span>{item}</span><span><Arrowsvg /></span></li>
-                  )
-                })
-            }
-          </ul>
-        </li>
-        <li className="relative group py-2 px-4 mx-5 font-extralight rounded-full hover:bg-white hover:text-[#004733]"><Link href='/'>HILOC</Link>
-          <ul className="absolute hidden left-0 bg-white top-full rounded-lg shadow-md p-4 group-hover:flex group-hover:flex-col ">
-            {
-              ["Apply Now",
-                "Calculate your Cash 💵",
-                "HELOC vs. Cash-out Refinance",
-                "Learning Center"].map((item) => {
-                  return (
-                    <li className="text-nowrap py-3 px-2 rounded-md flex gap-8 justify-between hover:bg-[#f6f6f3] group"><span>{item}</span><span><Arrowsvg /></span></li>
-                  )
-                })
-            }
-          </ul>
-        </li>
-        <li className="relative group py-2 px-4 mx-5 font-extralight rounded-full hover:bg-white hover:text-[#004733]"><Link href='/'>Rates</Link>
-          <ul className="absolute hidden left-0 bg-white top-full rounded-lg shadow-md p-4 group-hover:flex group-hover:flex-col">
-            {
-              ["Purchase mortgage rates",
-                "Refinance rates",
-                "Refinance cash-out rates",
-                "HELOC rates",
-                "Purchase VA rates"].map((item) => {
-                  return (
-                    <li className="text-nowrap py-3 px-2 rounded-md flex gap-8 justify-between hover:bg-[#f6f6f3] group"><span>{item}</span><span><Arrowsvg /></span></li>
-                  )
-                })
-            }
-          </ul>
-        </li>
-        <li className="relative group py-2 px-4 mx-5 font-extralight rounded-full hover:bg-white hover:text-[#004733]"><Link href='/'>Better+</Link>
-          <ul className="absolute hidden left-0 bg-white top-full rounded-lg shadow-md p-4 group-hover:flex group-hover:flex-col">
-            {
-              ["Get Insurance",
-                "Title and Closing",
-                "Better Attorney Match",
-                "Learning Center",
-                "Better Agent Match",
-                "Better Duo"].map((item) => {
-                  return (
-                    <li className="text-nowrap py-3 px-2 rounded-md flex gap-8 justify-between hover:bg-[#f6f6f3] group"><span>{item}</span><span><Arrowsvg /></span></li>
-                  )
-                })
-            }
-          </ul>
-        </li>
-      </ul>
-      <ul className="flex justify-center items-center gap-6">
-        <li className="rounded-full p-4 border-[1px] border-white "><Link href='/'><svg width="19" height="18" viewBox="0 0 19 18" class="transition-all ease-in-out group-hover:[&amp;_path]:fill-interactiveForegroundInversePrimary [&amp;_path]:fill-white h-3 w-3 md:h-4 md:w-4" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18.5 13.5L18.5 17C18.5 17.55 18.05 18 17.5 18C8.11 18 0.500002 10.39 0.500002 1C0.500002 0.450001 0.950003 0 1.5 0L4.99 0C5.54 0 5.99 0.450001 5.99 1C5.99 2.24 6.19 3.45 6.56 4.57C6.6 4.67 6.61 4.78 6.61 4.88C6.61 5.14 6.51 5.39 6.32 5.59L4.12 7.79C5.57 10.62 7.88 12.94 10.71 14.38L12.91 12.18C13.19 11.9 13.58 11.82 13.93 11.93C15.05 12.3 16.25 12.5 17.5 12.5C18.05 12.5 18.5 12.95 18.5 13.5Z" fill="#ffffff"></path></svg></Link></li>
-        <li className="rounded-full py-3 px-5 transition-all duration-300 hover:bg-white hover:text-black"><Link href='/'>Sign in</Link></li>
-        <li className="text-black bg-[#1ee07f] rounded-full py-3 px-5 transition-all duration-300 hover:bg-[#004733] hover:text-white"><Link href='/'>Continue</Link></li>
-        <li className="hidden"><Link href='/'>ham</Link></li>
-      </ul>
+    <div>
+      <div className="flex justify-between items-center px-24 py-6 fixed top-0 left-0 right-0 z-[1000]">
+        <Link href='/'><Bettersvg /></Link>
+        <ul className="hidden justify-center items-center font-thin xl:flex">
+          <li className="relative group py-2 px-4 mx-5 font-extralight rounded-full hover:bg-white hover:text-[#004733]"><Link href='/'>Buy</Link>
+            <ul className="absolute hidden left-0 bg-white top-full rounded-lg shadow-md p-4 group-hover:flex group-hover:flex-col ">
+              {
+                ["Apply now",
+                  "Purchase rates",
+                  "Affordability calculator",
+                  "Mortgage calculator",
+                  "Rent vs buy calculator",
+                  "Find an agent",
+                  "VA loans",
+                  "Learning center"].map((item) => {
+                    return (
+                      <li className="text-nowrap py-3 px-2 rounded-md flex gap-8 justify-between hover:bg-[#f6f6f3] group"><span>{item}</span><span><Arrowsvg /></span></li>
+                    )
+                  })
+              }
+            </ul>
+          </li>
+          <li className="relative group py-2 px-4 mx-5 font-extralight rounded-full hover:bg-white hover:text-[#004733]"><Link href='/'>Refinance</Link>
+            <ul className="absolute hidden left-0 bg-white top-full rounded-lg shadow-md p-4 group-hover:flex group-hover:flex-col ">
+              {
+                ["Apply Now",
+                  "Refinance rates",
+                  "Cash-out refinance calculator",
+                  "Learning Center"].map((item) => {
+                    return (
+                      <li className="text-nowrap py-3 px-2 rounded-md flex gap-8 justify-between hover:bg-[#f6f6f3] group"><span>{item}</span><span><Arrowsvg /></span></li>
+                    )
+                  })
+              }
+            </ul>
+          </li>
+          <li className="relative group py-2 px-4 mx-5 font-extralight rounded-full hover:bg-white hover:text-[#004733]"><Link href='/'>HILOC</Link>
+            <ul className="absolute hidden left-0 bg-white top-full rounded-lg shadow-md p-4 group-hover:flex group-hover:flex-col ">
+              {
+                ["Apply Now",
+                  "Calculate your Cash 💵",
+                  "HELOC vs. Cash-out Refinance",
+                  "Learning Center"].map((item) => {
+                    return (
+                      <li className="text-nowrap py-3 px-2 rounded-md flex gap-8 justify-between hover:bg-[#f6f6f3] group"><span>{item}</span><span><Arrowsvg /></span></li>
+                    )
+                  })
+              }
+            </ul>
+          </li>
+          <li className="relative group py-2 px-4 mx-5 font-extralight rounded-full hover:bg-white hover:text-[#004733]"><Link href='/'>Rates</Link>
+            <ul className="absolute hidden left-0 bg-white top-full rounded-lg shadow-md p-4 group-hover:flex group-hover:flex-col">
+              {
+                ["Purchase mortgage rates",
+                  "Refinance rates",
+                  "Refinance cash-out rates",
+                  "HELOC rates",
+                  "Purchase VA rates"].map((item) => {
+                    return (
+                      <li className="text-nowrap py-3 px-2 rounded-md flex gap-8 justify-between hover:bg-[#f6f6f3] group"><span>{item}</span><span><Arrowsvg /></span></li>
+                    )
+                  })
+              }
+            </ul>
+          </li>
+          <li className="relative group py-2 px-4 mx-5 font-extralight rounded-full hover:bg-white hover:text-[#004733]"><Link href='/'>Better+</Link>
+            <ul className="absolute hidden left-0 bg-white top-full rounded-lg shadow-md p-4 group-hover:flex group-hover:flex-col">
+              {
+                ["Get Insurance",
+                  "Title and Closing",
+                  "Better Attorney Match",
+                  "Learning Center",
+                  "Better Agent Match",
+                  "Better Duo"].map((item) => {
+                    return (
+                      <li className="text-nowrap py-3 px-2 rounded-md flex gap-8 justify-between hover:bg-[#f6f6f3] group"><span>{item}</span><span><Arrowsvg /></span></li>
+                    )
+                  })
+              }
+            </ul>
+          </li>
+        </ul>
+        <ul className="flex justify-center items-center gap-6">
+          <li className="rounded-full p-4 border-[1px] border-white "><Link href='/'><svg width="19" height="18" viewBox="0 0 19 18" class="transition-all ease-in-out group-hover:[&amp;_path]:fill-interactiveForegroundInversePrimary [&amp;_path]:fill-white h-3 w-3 md:h-4 md:w-4" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18.5 13.5L18.5 17C18.5 17.55 18.05 18 17.5 18C8.11 18 0.500002 10.39 0.500002 1C0.500002 0.450001 0.950003 0 1.5 0L4.99 0C5.54 0 5.99 0.450001 5.99 1C5.99 2.24 6.19 3.45 6.56 4.57C6.6 4.67 6.61 4.78 6.61 4.88C6.61 5.14 6.51 5.39 6.32 5.59L4.12 7.79C5.57 10.62 7.88 12.94 10.71 14.38L12.91 12.18C13.19 11.9 13.58 11.82 13.93 11.93C15.05 12.3 16.25 12.5 17.5 12.5C18.05 12.5 18.5 12.95 18.5 13.5Z" fill="#ffffff"></path></svg></Link></li>
+          <li className="rounded-full py-3 px-5 transition-all duration-300 hover:bg-white hover:text-black"><Link href='/'>Sign in</Link></li>
+          <li className="text-black bg-[#1ee07f] rounded-full py-3 px-5 transition-all duration-300 hover:bg-[#004733] hover:text-white"><Link href='/'>Continue</Link></li>
+          <li onClick={handleHam} className=" xl:hidden"><Hamsvg /></li>
+        </ul>
+      </div>
     </div>
   )
 }

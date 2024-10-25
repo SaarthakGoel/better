@@ -1,4 +1,6 @@
 'use client'
+import Footer from "@/components/homePage/footer";
+import Section4 from "@/components/homePage/section4";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useState, useEffect } from "react";
@@ -76,6 +78,8 @@ export default function Start() {
         </div>
       </div>
       <div id="triggerElement" className="h-1"></div>
+      <Section4 />
+      <Footer />
     </div>
   )
 }

@@ -56,14 +56,14 @@ export default function Section3() {
   }
 
   return (
-    <div className="w-[100vw] h-[140vh] px-32">
+    <div className="w-[100vw] pb-20 px-10 sm:px-20 md:px-32">
 
-      <div className="flex justify-between py-20">
-        <h1 className="text-5xl w-[500px]">Got questions? We've got answers</h1>
-        <div className="flex justify-between gap-4 py-6">
-          <button onClick={() => handleClick('Our products')} className={imgSrc === 'Our products' ? buttonclass : `ring-[1px] px-6 py-2 rounded-full ring-inset ring-gray-300 transition-all duration-300 hover:ring-[5px] hover:ring-[#017848] hover:text-[#017848] `}>Our products</button>
-          <button onClick={() => handleClick('Calculators')} className={imgSrc === 'Calculators' ? buttonclass : `ring-[1px] px-6 py-2 rounded-full ring-inset ring-gray-300 transition-all duration-300 hover:ring-[5px] hover:ring-[#017848] hover:text-[#017848] `}>Calculators</button>
-          <button onClick={() => handleClick('Guides & FAQs')} className={imgSrc === 'Guides & FAQs' ? buttonclass : `ring-[1px] px-6 py-3 rounded-full ring-inset ring-gray-300 transition-all duration-300 hover:ring-[5px] hover:ring-[#017848] hover:text-[#017848] `}>Guides & FAQs</button>
+      <div className="flex flex-col md:flex-row justify-between py-20">
+        <h1 className="text-4xl md:text-5xl w-[300px] md:w-[500px]">Got questions? We've got answers</h1>
+        <div className="flex justify-between flex-wrap gap-4 py-6">
+          <button onClick={() => handleClick('Our products')} className={imgSrc === 'Our products' ? buttonclass : `text-sm ring-[1px] px-6 py-2 rounded-full ring-inset ring-gray-300 transition-all duration-300 hover:ring-[5px] hover:ring-[#017848] hover:text-[#017848] `}>Our products</button>
+          <button onClick={() => handleClick('Calculators')} className={imgSrc === 'Calculators' ? buttonclass : `text-sm ring-[1px] px-6 py-2 rounded-full ring-inset ring-gray-300 transition-all duration-300 hover:ring-[5px] hover:ring-[#017848] hover:text-[#017848] `}>Calculators</button>
+          <button onClick={() => handleClick('Guides & FAQs')} className={imgSrc === 'Guides & FAQs' ? buttonclass : `text-sm ring-[1px] px-6 py-3 rounded-full ring-inset ring-gray-300 transition-all duration-300 hover:ring-[5px] hover:ring-[#017848] hover:text-[#017848] `}>Guides & FAQs</button>
         </div>
       </div>
 
