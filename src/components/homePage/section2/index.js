@@ -19,7 +19,7 @@ export default function Section2() {
         <div className="flex justify-between gap-4 py-6">
           <button onClick={() => handleClick('Arian')} className={imgSrc === 'Arian' ? buttonclass : `ring-[1px] px-6 py-2 rounded-full ring-inset ring-gray-300 transition-all duration-300 hover:ring-[5px] hover:ring-[#017848] hover:text-[#017848] `}>Arian</button>
           <button onClick={() => handleClick('Amanda')} className={imgSrc === 'Amanda' ? buttonclass : `ring-[1px] px-6 py-2 rounded-full ring-inset ring-gray-300 transition-all duration-300 hover:ring-[5px] hover:ring-[#017848] hover:text-[#017848] `}>Amanda</button>
-          <button onClick={() => handleClick('Paul')} className={imgSrc === 'Paul' ? buttonclass : `ring-[1px] px-6 py-3 rounded-full ring-inset ring-gray-300 transition-all duration-300 hover:ring-[5px] hover:ring-[#017848] hover:text-[#017848] `}>Paul</button>
+          <button onClick={() => handleClick('Paul')} className={imgSrc === 'Paul' ? buttonclass : `ring-[1px] px-6 py-2 rounded-full ring-inset ring-gray-300 transition-all duration-300 hover:ring-[5px] hover:ring-[#017848] hover:text-[#017848] `}>Paul</button>
         </div>
       </div>
       <div className="w-[30vw] flex-col">
