@@ -1,15 +1,17 @@
 'use client'
 import Hammenu from "@/components/hammenu";
 import Footer from "@/components/homePage/footer";
-import Header from "@/components/homePage/header";
 import Section2 from "@/components/homePage/section2";
 import Section3 from "@/components/homePage/section3";
 import Section4 from "@/components/homePage/section4";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import { useState } from "react";
 
 export default function Home() {
+
+  const router = useRouter();
 
 
   const [ham, setHam] = useState(false);
@@ -60,7 +62,7 @@ export default function Home() {
                   "VA loans",
                   "Learning center"].map((item) => {
                     return (
-                      <li className="text-nowrap py-3 px-2 rounded-md flex gap-8 justify-between hover:bg-[#f6f6f3] group"><span>{item}</span><span><Arrowsvg /></span></li>
+                      <li key={item} className="text-nowrap py-3 px-2 rounded-md flex gap-8 justify-between hover:bg-[#f6f6f3] group"><span>{item}</span><span><Arrowsvg /></span></li>
                     )
                   })
               }
@@ -74,7 +76,7 @@ export default function Home() {
                   "Cash-out refinance calculator",
                   "Learning Center"].map((item) => {
                     return (
-                      <li className="text-nowrap py-3 px-2 rounded-md flex gap-8 justify-between hover:bg-[#f6f6f3] group"><span>{item}</span><span><Arrowsvg /></span></li>
+                      <li key={item} className="text-nowrap py-3 px-2 rounded-md flex gap-8 justify-between hover:bg-[#f6f6f3] group"><span>{item}</span><span><Arrowsvg /></span></li>
                     )
                   })
               }
@@ -88,7 +90,7 @@ export default function Home() {
                   "HELOC vs. Cash-out Refinance",
                   "Learning Center"].map((item) => {
                     return (
-                      <li className="text-nowrap py-3 px-2 rounded-md flex gap-8 justify-between hover:bg-[#f6f6f3] group"><span>{item}</span><span><Arrowsvg /></span></li>
+                      <li key={item} className="text-nowrap py-3 px-2 rounded-md flex gap-8 justify-between hover:bg-[#f6f6f3] group"><span>{item}</span><span><Arrowsvg /></span></li>
                     )
                   })
               }
@@ -103,7 +105,7 @@ export default function Home() {
                   "HELOC rates",
                   "Purchase VA rates"].map((item) => {
                     return (
-                      <li className="text-nowrap py-3 px-2 rounded-md flex gap-8 justify-between hover:bg-[#f6f6f3] group"><span>{item}</span><span><Arrowsvg /></span></li>
+                      <li key={item} className="text-nowrap py-3 px-2 rounded-md flex gap-8 justify-between hover:bg-[#f6f6f3] group"><span>{item}</span><span><Arrowsvg /></span></li>
                     )
                   })
               }
@@ -119,7 +121,7 @@ export default function Home() {
                   "Better Agent Match",
                   "Better Duo"].map((item) => {
                     return (
-                      <li className="text-nowrap py-3 px-2 rounded-md flex gap-8 justify-between hover:bg-[#f6f6f3] group"><span>{item}</span><span><Arrowsvg /></span></li>
+                      <li key={item} className="text-nowrap py-3 px-2 rounded-md flex gap-8 justify-between hover:bg-[#f6f6f3] group"><span>{item}</span><span><Arrowsvg /></span></li>
                     )
                   })
               }
@@ -127,8 +129,8 @@ export default function Home() {
           </li>
         </ul>
         <ul className="flex justify-center items-center gap-2 lg:gap-6">
-          <li className="rounded-full p-2 sm:p-4 border-[0.5px] border-white "><Link href='/'><svg width="19" height="18" viewBox="0 0 19 18" className="transition-all ease-in-out fill-[#fff] h-3 w-3 md:h-4 md:w-4" fill="#017848" xmlns="http://www.w3.org/2000/svg"><path d="M18.5 13.5L18.5 17C18.5 17.55 18.05 18 17.5 18C8.11 18 0.500002 10.39 0.500002 1C0.500002 0.450001 0.950003 0 1.5 0L4.99 0C5.54 0 5.99 0.450001 5.99 1C5.99 2.24 6.19 3.45 6.56 4.57C6.6 4.67 6.61 4.78 6.61 4.88C6.61 5.14 6.51 5.39 6.32 5.59L4.12 7.79C5.57 10.62 7.88 12.94 10.71 14.38L12.91 12.18C13.19 11.9 13.58 11.82 13.93 11.93C15.05 12.3 16.25 12.5 17.5 12.5C18.05 12.5 18.5 12.95 18.5 13.5Z" fill="#fff"></path></svg></Link></li>
-          <li className=" hidden md:block rounded-full py-3 px-5 transition-all duration-300 text-white hover:bg-[#d9e2dc]"><Link href='/'>Sign in</Link></li>
+          <li className="rounded-full p-2 sm:p-4 border-[0.5px] border-white hover:opacity-50 "><Link href='/'><svg width="19" height="18" viewBox="0 0 19 18" className="transition-all ease-in-out h-3 w-3 md:h-4 md:w-4" fill="#017848" xmlns="http://www.w3.org/2000/svg"><path d="M18.5 13.5L18.5 17C18.5 17.55 18.05 18 17.5 18C8.11 18 0.500002 10.39 0.500002 1C0.500002 0.450001 0.950003 0 1.5 0L4.99 0C5.54 0 5.99 0.450001 5.99 1C5.99 2.24 6.19 3.45 6.56 4.57C6.6 4.67 6.61 4.78 6.61 4.88C6.61 5.14 6.51 5.39 6.32 5.59L4.12 7.79C5.57 10.62 7.88 12.94 10.71 14.38L12.91 12.18C13.19 11.9 13.58 11.82 13.93 11.93C15.05 12.3 16.25 12.5 17.5 12.5C18.05 12.5 18.5 12.95 18.5 13.5Z" fill="#fff"></path></svg></Link></li>
+          <li className=" hidden md:block rounded-full py-3 px-5 transition-all duration-300 text-white hover:bg-white hover:text-[#004733]"><Link href='/'>Sign in</Link></li>
           <li className="text-black text-sm sm:text-base bg-[#1ee07f] rounded-full py-2 sm:py-3 px-3 sm:px-5 transition-all duration-300 hover:bg-[#004733] hover:text-white"><Link href='/'>Continue</Link></li>
           <li onClick={handleHam} className=" xl:hidden"><Hamsvg /></li>
         </ul>
@@ -145,11 +147,11 @@ export default function Home() {
 
           <div className="flex flex-col md:flex-row w-full justify-center items-center pt-44 relative">
             <h1 className="text-[#fffdfa] font-bold text-4xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl mx-5 sm:mx-10 md:mx-28 lg:mx-40 my-5 absolute top-8  ">
-              The rate drop you've been waiting for
+              The rate drop you&#39;ve been waiting for
             </h1>
             <div>
               <div className="flex justify-center">
-                <button className="bg-[#1ee07f] text-black px-10 py-4 sm:py-5 rounded-full text-base hover:text-white hover:bg-[#004733] transition-all duration-300">
+                <button onClick={() => router.push('/start')} className="bg-[#1ee07f] text-black px-10 py-4 sm:py-5 rounded-full text-base hover:text-white hover:bg-[#004733] transition-all duration-300">
                   Start my approval
                 </button>
               </div>

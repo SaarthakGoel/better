@@ -1,5 +1,6 @@
 'use client'
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 
 
@@ -24,7 +25,7 @@ export default function Section2() {
       </div>
       <div className="md:w-[30vw] flex-col">
         <h1 className="text-5xl lg:text-7xl text-green-950 font-semibold">Find out why we’re better.</h1>
-        <button className="w-full md:w-auto py-5 my-4 px-8 rounded-full bg-[#004733] text-white">See all our stories</button>
+        <button className="w-full md:w-auto py-5 my-4 px-8 rounded-full bg-[#004733] text-white hover:bg-[#017848] transition-all duration-300"><Link href="/about-us">See all our stories</Link></button>
         <p className="flex justify-center md:justify-normal items-center space-x-2 text-sm">
           <Image src="/green-star.png" width={30} height={30} alt="star" />
           <span>Trustpilot</span>

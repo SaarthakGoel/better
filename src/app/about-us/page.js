@@ -23,7 +23,7 @@ export default function Aboutus() {
    const events = [
       {
          year: '2014',
-         description: "After Vishal Garg’s first attempt to purchase his own dream home...",
+         description: "After Vishal Garg&#39;s first attempt to purchase his own dream home...",
       },
       {
          year: '2015',
@@ -92,9 +92,10 @@ export default function Aboutus() {
          {/*HEADER*/ }
 
 <div className="flex justify-between items-center bg-[#eefaf5] px-5 sm:px-10 md:px-24 py-6 fixed top-0 left-0 right-0 z-[1000]">
+   <div className="flex justify-center items-center">
         <Link href='/'><Bettersvg /></Link>
         <ul className="hidden justify-center items-center font-thin xl:flex">
-          <li className="relative group py-2 px-4 mx-5 font-extralight rounded-full hover:bg-[#d9e2dc] hover:text-[#004733]"><Link href='/'>Buy</Link>
+          <li className="relative group py-2 px-4 mx-5 font-extralight rounded-full hover:bg-[#d9e2dc] hover:text-[#004733]">Buy
             <ul className="absolute hidden left-0 bg-white top-full rounded-lg shadow-md p-4 group-hover:flex group-hover:flex-col ">
               {
                 ["Apply now",
@@ -106,13 +107,13 @@ export default function Aboutus() {
                   "VA loans",
                   "Learning center"].map((item) => {
                     return (
-                      <li className="text-nowrap py-3 px-2 rounded-md flex gap-8 justify-between hover:bg-[#f6f6f3] group"><span>{item}</span><span><Arrowsvg /></span></li>
+                      <li key={item} className="text-nowrap py-3 px-2 rounded-md flex gap-8 justify-between hover:bg-[#f6f6f3] group"><span>{item}</span><span><Arrowsvg /></span></li>
                     )
                   })
               }
             </ul>
           </li>
-          <li className="relative group py-2 px-4 mx-5 font-extralight rounded-full hover:bg-[#d9e2dc] hover:text-[#004733]"><Link href='/'>Refinance</Link>
+          <li className="relative group py-2 px-4 mx-5 font-extralight rounded-full hover:bg-[#d9e2dc] hover:text-[#004733]">Refinance
             <ul className="absolute hidden left-0 bg-white top-full rounded-lg shadow-md p-4 group-hover:flex group-hover:flex-col ">
               {
                 ["Apply Now",
@@ -120,13 +121,13 @@ export default function Aboutus() {
                   "Cash-out refinance calculator",
                   "Learning Center"].map((item) => {
                     return (
-                      <li className="text-nowrap py-3 px-2 rounded-md flex gap-8 justify-between hover:bg-[#f6f6f3] group"><span>{item}</span><span><Arrowsvg /></span></li>
+                      <li key={item} className="text-nowrap py-3 px-2 rounded-md flex gap-8 justify-between hover:bg-[#f6f6f3] group"><span>{item}</span><span><Arrowsvg /></span></li>
                     )
                   })
               }
             </ul>
           </li>
-          <li className="relative group py-2 px-4 mx-5 font-extralight rounded-full hover:bg-[#d9e2dc] hover:text-[#004733]"><Link href='/'>HILOC</Link>
+          <li className="relative group py-2 px-4 mx-5 font-extralight rounded-full hover:bg-[#d9e2dc] hover:text-[#004733]">HILOC
             <ul className="absolute hidden left-0 bg-white top-full rounded-lg shadow-md p-4 group-hover:flex group-hover:flex-col ">
               {
                 ["Apply Now",
@@ -134,13 +135,13 @@ export default function Aboutus() {
                   "HELOC vs. Cash-out Refinance",
                   "Learning Center"].map((item) => {
                     return (
-                      <li className="text-nowrap py-3 px-2 rounded-md flex gap-8 justify-between hover:bg-[#f6f6f3] group"><span>{item}</span><span><Arrowsvg /></span></li>
+                      <li key={item} className="text-nowrap py-3 px-2 rounded-md flex gap-8 justify-between hover:bg-[#f6f6f3] group"><span>{item}</span><span><Arrowsvg /></span></li>
                     )
                   })
               }
             </ul>
           </li>
-          <li className="relative group py-2 px-4 mx-5 font-extralight rounded-full hover:bg-[#d9e2dc] hover:text-[#004733]"><Link href='/'>Rates</Link>
+          <li className="relative group py-2 px-4 mx-5 font-extralight rounded-full hover:bg-[#d9e2dc] hover:text-[#004733]">Rates
             <ul className="absolute hidden left-0 bg-white top-full rounded-lg shadow-md p-4 group-hover:flex group-hover:flex-col">
               {
                 ["Purchase mortgage rates",
@@ -149,13 +150,13 @@ export default function Aboutus() {
                   "HELOC rates",
                   "Purchase VA rates"].map((item) => {
                     return (
-                      <li className="text-nowrap py-3 px-2 rounded-md flex gap-8 justify-between hover:bg-[#f6f6f3] group"><span>{item}</span><span><Arrowsvg /></span></li>
+                      <li key={item} className="text-nowrap py-3 px-2 rounded-md flex gap-8 justify-between hover:bg-[#f6f6f3] group"><span>{item}</span><span><Arrowsvg /></span></li>
                     )
                   })
               }
             </ul>
           </li>
-          <li className="relative group py-2 px-4 mx-5 font-extralight rounded-full hover:bg-[#d9e2dc] hover:text-[#004733]"><Link href='/'>Better+</Link>
+          <li className="relative group py-2 px-4 mx-5 font-extralight rounded-full hover:bg-[#d9e2dc] hover:text-[#004733]">Better+
             <ul className="absolute hidden left-0 bg-white top-full rounded-lg shadow-md p-4 group-hover:flex group-hover:flex-col">
               {
                 ["Get Insurance",
@@ -165,17 +166,18 @@ export default function Aboutus() {
                   "Better Agent Match",
                   "Better Duo"].map((item) => {
                     return (
-                      <li className="text-nowrap py-3 px-2 rounded-md flex gap-8 justify-between hover:bg-[#f6f6f3] group"><span>{item}</span><span><Arrowsvg /></span></li>
+                      <li key={item} className="text-nowrap py-3 px-2 rounded-md flex gap-8 justify-between hover:bg-[#f6f6f3] group"><span>{item}</span><span><Arrowsvg /></span></li>
                     )
                   })
               }
             </ul>
           </li>
         </ul>
+        </div>
         <ul className="flex justify-center items-center gap-2 lg:gap-6">
-          <li className="rounded-full p-2 sm:p-4 border-[1px] border-[#143e2d] "><Link href='/'><svg width="19" height="18" viewBox="0 0 19 18" className="transition-all ease-in-out fill-[#017848] h-3 w-3 md:h-4 md:w-4" fill="#017848" xmlns="http://www.w3.org/2000/svg"><path d="M18.5 13.5L18.5 17C18.5 17.55 18.05 18 17.5 18C8.11 18 0.500002 10.39 0.500002 1C0.500002 0.450001 0.950003 0 1.5 0L4.99 0C5.54 0 5.99 0.450001 5.99 1C5.99 2.24 6.19 3.45 6.56 4.57C6.6 4.67 6.61 4.78 6.61 4.88C6.61 5.14 6.51 5.39 6.32 5.59L4.12 7.79C5.57 10.62 7.88 12.94 10.71 14.38L12.91 12.18C13.19 11.9 13.58 11.82 13.93 11.93C15.05 12.3 16.25 12.5 17.5 12.5C18.05 12.5 18.5 12.95 18.5 13.5Z" fill="#143e2d"></path></svg></Link></li>
-          <li className=" hidden md:block rounded-full py-3 px-5 transition-all duration-300 text-gray-500 hover:bg-[#d9e2dc]"><Link href='/'>Sign in</Link></li>
-          <li className="text-white text-sm sm:text-base bg-[#017848] rounded-full py-2 sm:py-3 px-3 sm:px-5 transition-all duration-300 hover:bg-[#004733] hover:text-white"><Link href='/'>Continue</Link></li>
+          <li className="rounded-full p-2 sm:p-4 border-[1px] border-[#143e2d] "><svg width="19" height="18" viewBox="0 0 19 18" className="transition-all ease-in-out fill-[#017848] h-3 w-3 md:h-4 md:w-4" fill="#017848" xmlns="http://www.w3.org/2000/svg"><path d="M18.5 13.5L18.5 17C18.5 17.55 18.05 18 17.5 18C8.11 18 0.500002 10.39 0.500002 1C0.500002 0.450001 0.950003 0 1.5 0L4.99 0C5.54 0 5.99 0.450001 5.99 1C5.99 2.24 6.19 3.45 6.56 4.57C6.6 4.67 6.61 4.78 6.61 4.88C6.61 5.14 6.51 5.39 6.32 5.59L4.12 7.79C5.57 10.62 7.88 12.94 10.71 14.38L12.91 12.18C13.19 11.9 13.58 11.82 13.93 11.93C15.05 12.3 16.25 12.5 17.5 12.5C18.05 12.5 18.5 12.95 18.5 13.5Z" fill="#143e2d"></path></svg></li>
+          <li className=" hidden md:block rounded-full py-3 px-5 transition-all duration-300 text-gray-500 hover:bg-[#d9e2dc]">Sign in</li>
+          <li className="text-white text-sm sm:text-base bg-[#017848] rounded-full py-2 sm:py-3 px-3 sm:px-5 transition-all duration-300 hover:bg-[#004733] hover:text-white">Continue</li>
           <li onClick={handleHam} className=" xl:hidden"><Hamsvg /></li>
         </ul>
       </div>
@@ -184,16 +186,16 @@ export default function Aboutus() {
          <div className="py-60 lg:h-[95vh] px-10 sm:px-20 md:px-40 lg:px-80 flex flex-col gap-8 justify-center items-center">
             <h3 className="text-3xl text-[#017848]">Our mission</h3>
             <h1 className="text-[1.75rem] sm:text-3xl md:text-[2.4rem] font-medium text-center">
-               We’re making homeownership simpler, faster — and most importantly, more accessible for all Americans.
+               We&#39;re making homeownership simpler, faster — and most importantly, more accessible for all Americans.
             </h1>
          </div>
 
          <div className="flex flex-col-reverse md:flex-row gap-20 justify-center items-center pb-40 md:py-40 lg:py-0 lg:h-[60vh] px-16 sm:px-20 md:px-40 lg:px-60">
             <div className="flex-1 flex flex-col sm:px-10">
                <h1 className="text-[1.75rem] font-medium">The status quo is broken</h1>
-               <p className="text-sm text-[#565d5a] font-thin py-8">The traditional processes around homeownership are opaque and stressful. Fees aren’t transparent and some are simply outrageous in size. Traditional mortgage lending is rife with unnecessary fees and slow, painful processes. It’s a system set up to benefit insiders — not you. Better.com CEO, Vishal Garg, set out to change that.</p>
+               <p className="text-sm text-[#565d5a] font-thin py-8">The traditional processes around homeownership are opaque and stressful. Fees aren&#39;t transparent and some are simply outrageous in size. Traditional mortgage lending is rife with unnecessary fees and slow, painful processes. It&#39;s a system set up to benefit insiders — not you. Better.com CEO, Vishal Garg, set out to change that.</p>
                <div>
-                  <button className="text-white bg-[#017848] p-5 rounded-md hover:bg-[#004733] transition-all duration-300">Read Vishal's story</button>
+                  <button className="text-white bg-[#017848] p-5 rounded-md hover:bg-[#004733] transition-all duration-300">Read Vishal&#39;s story</button>
                </div>
             </div>
             <div onClick={handlepop} className="flex-1 relative">
@@ -204,9 +206,9 @@ export default function Aboutus() {
 
          <div className="bg-[#017848]">
             <div className="px-10 sm:px-20 md:px-40 lg:px-80 py-20 text-white">
-               <h1 className="text-[2.5rem] py-2">How we’re changing things</h1>
-               <p className="text-[0.9rem] font-thin py-4">Homeownership is a huge part of our economy. Housing overall is a $33 trillion business, and mortgages account for $15 trillion. Yet home finance operates in the same way it has for decades — through opaque systems and expensive intermediaries whose interests are misaligned with consumers’.</p>
-               <p className="text-[0.9rem] font-thin py-4">That’s why Better.com is redefining the homeownership process from the ground up. We’re using technology to make it faster and more efficient, and humans to help make it friendly and enjoyable.</p>
+               <h1 className="text-[2.5rem] py-2">How we&#39;re changing things</h1>
+               <p className="text-[0.9rem] font-thin py-4">Homeownership is a huge part of our economy. Housing overall is a $33 trillion business, and mortgages account for $15 trillion. Yet home finance operates in the same way it has for decades — through opaque systems and expensive intermediaries whose interests are misaligned with consumers&#39;.</p>
+               <p className="text-[0.9rem] font-thin py-4">That&#39;s why Better.com is redefining the homeownership process from the ground up. We&#39;re using technology to make it faster and more efficient, and humans to help make it friendly and enjoyable.</p>
             </div>
          </div>
 
@@ -242,7 +244,7 @@ export default function Aboutus() {
                   </div>
                   <div className="rounded-sm relative w-full bg-[#dfe0dc] my-4 p-4 lg:p-8 -ml-4 -translate-x-1/2 lg:-ml-8">
                      <p className="font-normal leading-body m-0 p-0 text-left text-[#565d5a] text-base">
-                        After Vishal Garg’s first attempt to purchase his own dream home, he quickly realized that the homebuying process is unnecessarily broken. This inspired him to found a technology-first company led by engineers and data experts with the mission of digitizing and automating home finance to make it cheaper, easier, and faster for all.
+                        After Vishal Garg&#39;s first attempt to purchase his own dream home, he quickly realized that the homebuying process is unnecessarily broken. This inspired him to found a technology-first company led by engineers and data experts with the mission of digitizing and automating home finance to make it cheaper, easier, and faster for all.
                      </p>
                   </div>
                </div>
@@ -308,7 +310,7 @@ export default function Aboutus() {
                   </div>
                   <div className="rounded-sm relative w-full bg-[#dfe0dc] my-4 p-4 lg:p-8 -ml-4 -translate-x-1/2 lg:-ml-8">
                      <p className="font-normal leading-body m-0 p-0 text-left text-[#565d5a] text-base">
-                        Better acquires Trussle — The UK’s most innovative online mortgage broker.
+                        Better acquires Trussle — The UK&#39;s most innovative online mortgage broker.
                      </p>
                   </div>
                </div>

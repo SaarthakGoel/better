@@ -28,7 +28,7 @@ export default function Section4() {
             <span>Better is a family of companies serving all your homeownership needs.</span>
             <div className="mt-6">
               <Image className="cursor-pointer" src="/bottom-links/better-mortgage-logo.svg" width={150} height={50} alt="hello" />
-              <p className="text-xs py-4">We can't wait to say "Welcome home." Apply 100% online, with expert customer support.</p>
+              <p className="text-xs py-4">We can&#39;t wait to say &#34;Welcome home.&#34; Apply 100% online, with expert customer support.</p>
               <Image className="cursor-pointer" src="/bottom-links/better-real-estate-logo.svg" width={150} height={50} alt="hello" />
               <p className="text-xs py-4">Connect with a local Better Real Estate Partner Agent to find out all the ways you can save.</p>
               <Image className="cursor-pointer" src="/bottom-links/better-cover-logo.svg" width={120} height={50} alt="hello" />

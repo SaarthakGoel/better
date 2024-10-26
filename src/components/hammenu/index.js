@@ -54,7 +54,7 @@ export default function Hammenu({ setHam }) {
         "VA loans",
         "Learning center"
       ].map((item) => (
-        <li className="w-full py-3 px-2 rounded-md hover:bg-[#f6f6f3] group">{item}</li>
+        <li key={item} className="w-full py-3 px-2 rounded-md hover:bg-[#f6f6f3] group">{item}</li>
       ))}
     </ul>
   </li>
@@ -71,7 +71,7 @@ export default function Hammenu({ setHam }) {
         "Cash-out refinance calculator",
         "Learning Center"
       ].map((item) => (
-        <li className="w-full py-3 px-2 rounded-md hover:bg-[#f6f6f3] group">{item}</li>
+        <li key={item} className="w-full py-3 px-2 rounded-md hover:bg-[#f6f6f3] group">{item}</li>
       ))}
     </ul>
   </li>
@@ -88,7 +88,7 @@ export default function Hammenu({ setHam }) {
         "HELOC vs. Cash-out Refinance",
         "Learning Center"
       ].map((item) => (
-        <li className="w-full py-3 px-2 rounded-md hover:bg-[#f6f6f3] group">{item}</li>
+        <li key={item} className="w-full py-3 px-2 rounded-md hover:bg-[#f6f6f3] group">{item}</li>
       ))}
     </ul>
   </li>
@@ -106,7 +106,7 @@ export default function Hammenu({ setHam }) {
         "HELOC rates",
         "Purchase VA rates"
       ].map((item) => (
-        <li className="w-full py-3 px-2 rounded-md hover:bg-[#f6f6f3] group">{item}</li>
+        <li key={item} className="w-full py-3 px-2 rounded-md hover:bg-[#f6f6f3] group">{item}</li>
       ))}
     </ul>
   </li>
@@ -125,7 +125,7 @@ export default function Hammenu({ setHam }) {
         "Better Agent Match",
         "Better Duo"
       ].map((item) => (
-        <li className="w-full py-3 px-2 rounded-md hover:bg-[#f6f6f3] group">{item}</li>
+        <li key={item} className="w-full py-3 px-2 rounded-md hover:bg-[#f6f6f3] group">{item}</li>
       ))}
     </ul>
   </li>
