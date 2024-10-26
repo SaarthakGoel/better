@@ -87,10 +87,10 @@ export default function Calculator() {
           <div className="flex flex-1">
             <div className="w-9/12">
               <div className="relative z-0 [&>div:first-of-type]:rounded-r-none">
-                <div className="p-2 bg-white relative rounded-lg bg-backgroundTertiary w-full border border-solid border-strokeBorder ease-in-out duration-300 whitespace-nowrap overflow-hidden truncate focus:shadow-[#017848] focus:border-[#017848] hover:shadow-[#017848] hover:border-[#017848] focus:shadow-[0_0_0_3px_inset] hover:shadow-[0_0_0_3px_inset]">
+                <div className="px-4 pt-[1.7rem] pb-[1rem] bg-white relative rounded-lg bg-backgroundTertiary w-full border border-solid border-strokeBorder ease-in-out duration-300 whitespace-nowrap overflow-hidden truncate focus:shadow-[#017848] focus:border-[#017848] hover:shadow-[#017848] hover:border-[#017848] focus:shadow-[0_0_0_3px_inset] hover:shadow-[0_0_0_3px_inset]">
                   <label for="input-downpayment" id="downpayment-label" className="leading-body text-[#6f7672] absolute left-4 ease-in-out duration-300 transition-all transform-origin-top-left z-10 top-2 text-xs font-normal">Down payment</label>
                   <div aria-hidden="true" data-testid="input-icon-box" className="mr-2 absolute ease-in-out duration-300 transition-all font-bold z-10 w-lg h-lg flex items-center justify-center top-6 left-2">$</div>
-                  <input data-qa="downpayment" name="downpayment" type="tel" data-labelalign="top" id="input-downpayment" autocapitalize="off" autocorrect="off" aria-invalid="false" className="text-left pl-8 px-2 pt-6 pb-3 relative outline-none border-none rounded-sm text-default font-bold w-full h-full box-border" value={down} />
+                  <span className="text-left px-6  relative outline-none border-none rounded-sm text-default font-bold w-full h-full box-border">{down.toFixed()}</span>
                 </div>
               </div>
             </div>
@@ -98,7 +98,7 @@ export default function Calculator() {
               <div className="relative z-0 flex [&>div:first-of-type]:rounded-l-none [&>div:first-of-type]:border-l-0">
                 <div className="p-2 bg-white relative rounded-lg bg-backgroundTertiary w-full border border-solid border-strokeBorder ease-in-out duration-300 whitespace-nowrap overflow-hidden truncate focus:shadow-[#017848] focus:border-[#017848] hover:shadow-[#017848] hover:border-[#017848] focus:shadow-[0_0_0_3px_inset] hover:shadow-[0_0_0_3px_inset]">
                   <div aria-hidden="true" data-testid="input-icon-box" className="mr-2 top-6 absolute ease-in-out duration-300 transition-all font-bold z-10 w-lg h-lg flex items-center justify-center right-2">%</div>
-                  <input data-qa="down-payment-ratio" data-labelalign="top" id="input-2" autocapitalize="off" autocorrect="off" className="text-left px-2 pt-6 pb-3 relative outline-none border-none rounded-sm text-default font-bold w-full h-full box-border" value={downpayment} onChange={(e) => setDownpayment(e.target.value)} />
+                  <input type="number" data-qa="down-payment-ratio" data-labelalign="top" id="input-2" autocapitalize="off" autocorrect="off" className="text-left px-2 pt-6 pb-3 relative outline-none border-none rounded-sm text-default font-bold w-full h-full box-border" value={downpayment} onChange={(e) => setDownpayment(e.target.value)} />
                 </div>
               </div>
             </div>
