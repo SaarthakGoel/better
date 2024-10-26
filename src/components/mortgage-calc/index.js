@@ -110,7 +110,7 @@ export default function Calculator() {
               <div className="p-2 bg-white relative rounded-lg bg-backgroundTertiary w-full border border-solid border-strokeBorder ease-in-out duration-300 whitespace-nowrap overflow-hidden truncate focus:shadow-[#017848] focus:border-[#017848] hover:shadow-[#017848] hover:border-[#017848] focus:shadow-[0_0_0_3px_inset] hover:shadow-[0_0_0_3px_inset]">
                 <label for="input-3" id="3-label" className="leading-body text-[#6f7672] absolute left-4 ease-in-out duration-300 transition-all transform-origin-top-left z-10 top-2 text-xs font-normal">Interest rate</label>
                 <div aria-hidden="true" data-testid="input-icon-box" className="mr-2 absolute ease-in-out duration-300 transition-all font-bold z-10 w-lg h-lg flex items-center justify-center top-6 right-2">%</div>
-                <input data-labelalign="top" id="input-3" autocapitalize="off" autocorrect="off" className="text-left px-2 pb-3 pt-6 relative outline-none border-none rounded-sm text-default font-bold w-full h-full box-border" value={interest} onChange={(e) => setInterest(e.target.value)} />
+                <input type="number" data-labelalign="top" id="input-3" autocapitalize="off" autocorrect="off" className="text-left px-2 pb-3 pt-6 relative outline-none border-none rounded-sm text-default font-bold w-full h-full box-border" value={interest} onChange={(e) => setInterest(e.target.value)} />
               </div>
             </div>
           </div>
