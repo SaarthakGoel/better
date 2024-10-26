@@ -6,7 +6,7 @@ import Section3 from "@/components/homePage/section3";
 import Section4 from "@/components/homePage/section4";
 import Image from "next/image";
 import Link from "next/link";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 
 export default function Home() {
